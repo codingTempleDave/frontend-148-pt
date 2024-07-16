@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- The DOCTYPE declaration, like the grand curtain raiser announcing the beginning of a play -->
+<html>
+    <!-- The <html> tag, opening the theater doors to encompass the entire performance -->
+
+    <head>
+        <!-- The <head> section, the theater’s marquee with essential information about the show -->
+        <title>Welcome to Our Digital Theater</title>
+        <!-- The title of the page, like the name of the play displayed on the marquee -->
+            <!-- Standard Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A warm welcome to our digital theater, showcasing the 'Hello World' of HTML.">
+        <meta name="keywords" content="HTML, HelloWorld, WebDevelopment, Theater">
+        <meta name="author" content="Web Development Mentor">
+        <!-- inserting a favicon (small image in the browser tab)-->
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="index.css">
+
+        <style>
+           /* Google Font import */
+           @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+           /* CSS LAND | ONLY CSS ALLOWED HERE | INTERNAL STYLING */
+
+           /* h1 - selector | color - property | red - value  */
+           h1 {
+            color:red;
+            font-family: arial;
+           }
+
+           body {
+            background-color: lightgray;
+            font-family: "Red Hat Display", sans-serif;
+            font-size: 18px;
+            /* insert bg image */
+            /* background: url("pathToImage"); */
+           }
+
+           p {
+            font-size:14px;
+           }
+
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <p>
+                I am 1st p tag!
+            </p>
+            <div>
+                <p>
+                    I'm the 2nd p tag in the div tag!
+                </p>
+            </div>
+            <p>
+                This should work too
+            </p>
+        </section>
+
+
+        <!-- The <body> section, where the main performance (web content) takes place -->
+        <!-- inline style -->
+        <h1 style="color:cadetblue">Hello World</h1>
+        <h1>I am awesome!</h1>
+        <!-- A heading element, like a bold opening line in a play -->
+        <p>Welcome to our digital theater! Enjoy the show.</p>
+        <!-- A paragraph element, akin to the introductory dialogue in a performance -->
+        <!-- Adding Headings and Paragraphs -->
+        <h2 style="color:red">The Stage of HTML</h2>
+        <p>Our digital stage is set with various HTML elements that bring life to web pages.</p>
+
+        <!-- Text Formatting -->
+        <p>This is <strong>important</strong> and <em>emphasized</em> text.</p>
+
+        <!-- Lists -->
+        <h3 id="largerFont">Props List:</h3>
+        <ul>
+            <li>Scenes (divs)</li>
+            <li>Costumes (CSS)</li>
+            <li>Scripts (JavaScript)</li>
+        </ul>
+
+        <!-- Hyperlinks and Images -->
+        <p>Discover more about HTML at <a href="https://www.w3schools.com/html/default.asp">Our HTML Theater</a>.</p>
+        <p>Discover more about HTML at <a href="https://www.w3schools.com/html/default.asp" class="otherTheater">Our Other HTML Theater</a>.</p>
+        <img src="theater.jpg" alt="A beautiful digital theater" />
+
+        <!-- Line Breaks and Horizontal Rules -->
+        <p>This is the first line.<br>This is the second line.</p>
+        <hr>
+
+        <!-- Special Characters -->
+        <p>Did you know that the &lt; symbol is used to start HTML tags?</p>
+
+        <!-- HTML Comments -->
+        <!-- This is a comment and will not be visible to the audience -->
+    </body>
+
+</html>

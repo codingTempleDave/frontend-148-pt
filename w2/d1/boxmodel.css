@@ -1,0 +1,38 @@
+html {
+  /* root font value */
+  font-size: 16px;
+}
+
+.box1 {
+  font-size:12px;
+  width:90%;
+  height:50vh;
+  border:solid 2px black;
+}
+
+.box2 {
+  /* 3 times the font's root value */
+  font-size:20px;
+  width:30vw;
+  height:300px;
+  border:solid 2px red;
+}
+
+.box3 {
+  /* 3 times the parent's font value */
+  font-size:2em;
+  width:100px;
+  height:200px;
+  border:solid 2px blue;
+}
+
+.boxModelBox {
+  height:400px;
+  width:400px;
+  border:dashed green 30px;
+  margin-top:120px;
+  /* top right bottom left */
+  margin:120px 20px 20px 20px;
+  /* padding top, right, bottom left*/
+  padding:30px;
+}

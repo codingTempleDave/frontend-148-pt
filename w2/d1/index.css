@@ -1,0 +1,48 @@
+h2 {
+  color: darkslategray !important;
+  font-style: italic;
+  transform: rotate(180deg);
+  width:300px;
+  transition: .3s;
+}
+
+h2:hover {
+  transform: rotate(1deg);
+}
+
+ul {
+  list-style-type: circle; /* Adds a bit of flair to our list */
+}
+
+a {
+  color: teal; /* A soothing, clickable teal for links */
+  text-decoration: none; /* Removes the underline to clean up the appearance */
+}
+
+/* . (period) classes (apply however much you want) */
+.otherTheater {
+  color:chartreuse;
+}
+
+/* # id's (once per page) */
+#largerFont {
+  font-size:35px;
+}
+
+/* grouping selectors */
+/* every h1, h2, and h3 will be styled */
+h1, h2, h3 {
+  font-family:arial;
+}
+
+/* selects all p tags that exist in a section tag */
+/*
+section p {
+  color:blue;
+}
+  */
+
+/* selects direct children of section nothing more */
+section > p {
+  color:red;
+}
