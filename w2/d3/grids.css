@@ -1,0 +1,107 @@
+.container {
+  display: grid;
+  /* 3 columns 1st is 1fr | 2nd is 2fr | 3rd is 1fr*/
+  /*
+    frs are fractions, they add up to 100%
+    in this case 1fr is 25% and 2fr is 50%
+  */
+  grid-template-columns: 1fr 2fr 1fr;
+
+  /* 3 rows 1st is 200px | 2nd is 300px | 3rd is 150px*/
+  grid-template-rows: 200px 300px 150px;
+  gap: 10px;
+  margin: 0 auto; /* sometimes centers stuff*/
+  width: 80%;
+  border: 2px solid black;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4; /* 3rd column always one more*/
+  grid-row-start: 1;
+  grid-row-end: 2; /* end on row 1 */
+  border: 2px solid black;
+  background-color: azure;
+}
+
+.mid_left {
+  grid-column: 1 / 2; /* starts at 1 ends at 2 */
+  grid-row: 2 / 3; /* starts on row 2 ends at 2 */
+  border: 2px solid black;
+  background-color:crimson;
+}
+
+.mid_mid {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border: 2px solid black;
+  background-color:gold;
+}
+
+.mid_right {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  border: 2px solid black;
+  background-color:wheat;
+}
+
+.footer {
+  grid-column: 1 / span 3;
+  grid-row: 3 / 4;
+  border: 2px solid black;
+  background-color:tomato;
+  /*
+  display:none; removed from the page
+  opacity: 0; is invisible but still there
+  */
+}
+
+/* break point */
+@media screen and (max-width: 768px){
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 150px 125px 125px 125px 100px;
+    gap: 5px;
+    width: 95%;
+    grid-template-areas:
+      "header"
+      "mid_left"
+      "mid_mid"
+      "mid_right"
+      "footer";
+  }
+
+  .header {
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2; */
+    grid-area: header;
+  }
+
+  .mid_left {
+    /* grid-column: 1 / 2;
+    grid-row: 2 / 3; */
+    grid-area: mid_left;
+  }
+
+  .mid_mid {
+    /* grid-column: 1 / 2;
+    grid-row: 3 / 4; */
+    grid-area: mid_mid;
+  }
+
+  .mid_right {
+    /* grid-column: 1 / 2;
+    grid-row: 4 / 5; */
+    grid-area: mid_right;
+  }
+
+  .footer {
+    /* grid-column: 1 / 2;
+    grid-row: 5 / 6; */
+    grid-area: footer;
+  }
+} /* closing media query bracket */
+
