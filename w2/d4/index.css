@@ -1,0 +1,72 @@
+body {
+  background-color: rgba(255,0,0,.2);
+}
+
+.linear_gradient {
+  width:300px;
+  height:300px;
+  background: linear-gradient(180deg, blue,lightblue);
+}
+
+.radial_gradient {
+  width:300px;
+  height:300px;
+  background: radial-gradient(circle, blue,lightblue);
+}
+
+.box_text_shadow {
+  width:300px;
+  height:300px;
+  font-size:24px;
+  background-color:darkblue;
+  /* 1st num - horizontal 2nd - vertical 3rd - blur | color */
+  box-shadow: 15px 10px 20px rgba(0,0,0,.8);
+
+  /* 1st num - horizontal 2nd - vertical 3rd - blur | color */
+  /* great for making text on images readable */
+  text-shadow: 1px 1px 0px white;
+}
+
+.bg_clip {
+  /*
+    background-clip property
+    https://www.w3schools.com/cssref/tryit.php?filename=trycss3_background-clip
+  */
+  background: linear-gradient(to right, #b5cde8, blue);
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.heart {
+  width: 150px;
+  animation: pulse 2s infinite;
+  position:absolute;
+  top:10px;
+  left:230px;
+  z-index: 0;
+  filter:grayscale(100);
+  transition: .3s;
+}
+
+.heart:hover {
+  filter: grayscale(0);
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); margin-left:230px; opacity:0 }
+}
+
+.wheel {
+  width:150px;
+  animation: rotate 10s infinite linear;
+  z-index: 1000;
+  animation-direction: alternate;
+}
+
