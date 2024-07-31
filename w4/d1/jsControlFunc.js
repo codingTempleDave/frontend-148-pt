@@ -131,19 +131,15 @@ const addArrow = (a, b) => a + b;
 console.log(addArrow(3,5));
 
 
-// Regular Function vs arrow functions and this.
+// Regular Function vs arrow functions and the this keyword.
 var checkThis = {
-
   str: "sup",
   normalFunction: function() { console.log("In normal function:", this, this.str); },
   arrowFunction: () => console.log("In arrow function:", this, this.str)
-
 };
 
-checkThis.normalFunction(); // scoped from where the function was called from
-                            // within (the checkThis object)
-checkThis.arrowFunction();  // scoped from the function where it's been defined - wasn't
-                            // defined in a func so its the window object
+checkThis.normalFunction(); // "this" represents the object that called the function (the checkThis object)
+checkThis.arrowFunction();  // "this" represents the object that the function is defined in (the global window object)
 
 var checkThis2 = {
   str: "sup",
@@ -158,7 +154,5 @@ var checkThis2 = {
 
 };
 
-checkThis2.normalFunction();// scoped from where the function was called from within
-                            // (setTimeout, the window object)
-checkThis2.arrowFunction(); // scoped from where it's been defined (arrFunc) which is in
-                            // the object so this is the object
+checkThis2.normalFunction();// "this" represents the object that called the function (setTimeout which belongs to the window object)
+checkThis2.arrowFunction(); // "this" represents the object that the function is defined in (arrFunc() which belongs to checkThis2 object)
